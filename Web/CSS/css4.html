@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+  <head>
+    <title>CSS4</title>
+    <style type="text/css" media="screen">
+
+    /* ">" child selector */
+    /* ":" pseudo element */
+    html > body > p > a{
+      font-size: 50px;
+    }
+    html > body > p > a:visited {
+      color: green;
+    }
+    html > body > p:first-letter{
+      font-size: 90px;
+    }
+    p.firstP::first-letter{
+      color: pink;
+    }
+    p.secondP::first-letter{
+      color: blue;
+    }
+
+    </style>
+  </head>
+  <body>
+    <a href="https://google.com">google1</a>
+    <p class="firstP" id="p1"><a href="https://google.com">First paragraph</a></p>
+    <p class="secondP" id="p2">2nd paragrah</p>
+    <p class="thirdP" id="p3">3rd ...</p>
+    <h3><a href="https://google.com">google3</a></h3>
+  </body>
+</html>
