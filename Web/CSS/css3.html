@@ -4,20 +4,67 @@
   <head>
     <title>CSS3</title>
     <style type="text/css" media="screen">
-    div.div1{
+    div.pinkText{
+      background-color: black;
+      color: pink;
+      font-weight: bold;
+    }
+    #d1{
       border: 3px solid blue;
       position: absolute;
       width: 300px;
-      top: 10px;
-      left: 35px;
+      top: 100px;
+      left: 350px;
     }
+    #d2{
+      border: 5px dashed green;
+      position: absolute;
+      width: 500px;
+      top: 500px;
+      left: 10px;
+    }
+    h4.redText{
+      color: red;
+      font-weight: bold;
+    }
+    h4{
+      color: blue;
+      font-weight: lighter;
+    }
+
+    a:link.aSpecialLink{
+      color: red;
+      text-decoration: overline;
+    }
+    a:visited.aSpecialLink{
+      color: green;
+    }
+    a:hover.aSpecialLink{
+      background-color: red;
+      color: white;
+      text-decoration: none;
+      font-weight: normal;
+    }
+    a:active.aSpecialLink{
+      background-color: orange;
+      color: blue;
+      text-decoration: underline;
+      font-weight: bold;
+    }
+
 
     </style>
   </head>
   <body>
-    <div class="div1">
+    <!--class: multiple instances; id: singular instance-->
+    <div class="pinkText" id="d1">
       Sample Text
     </div>
-    <h4><a href="css1.html">Hello World 皇朝光輝17H</a> </h4>
+    <div class="pinkText" id="d2">
+      <br/>lol<br/><hr/><br/><br/>lol
+    </div>
+
+    <h4 class="redText"><a href="css1.html" class="aSpecialLink">Hello World 皇朝光輝17H</a> and more</h4>
+    <h4>Another Sample Text <a href="https://google.com">google</a></h4>
   </body>
 </html>
