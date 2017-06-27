@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JS1</title>
+  </head>
+  <body>
+
+
+    <script type="text/javascript">
+    //<!--//check for older browse
+      document.write("<h2>Variables</h2>");
+      var x = "Hello World";
+      document.write(x);
+      x = 32;
+      document.write(x);
+      x = null;
+      document.write(x);
+      x = false;
+      document.write(x);
+      x = "Hello, World"
+      var y = 24.77;
+      document.write(y+" "+x+" "+y);
+
+
+      //===================Basic Function
+      //document.write("<hr/><h2>Basic alert Function</h2>");
+      function f1(x){
+        alert(x);
+      }
+      // f1("Hello, World");
+      // f1(42.4242);
+      //====================Pass by Value/Reference checking : pass by value
+      document.write("<hr/><h2>Pass by Val/Ref (answer:value)</h2>");
+      function f2(n){
+        n++;
+      }
+      x = 1;
+      f2(x);
+      document.write(x);
+      document.write("<br/>");
+
+      function f3(n){
+        n++;
+        return n;
+      }
+      x = f3(x);
+      document.write(x);
+
+      //===================scope of variables
+      document.write("<hr/><h2>Scope of Variables</h2>");
+      function varScope(){
+        x++;
+        return x;
+      }
+      x = varScope();
+      document.write(x);
+      document.write("<br/>");
+
+      //==================if statement
+      document.write("<hr/><h2>If Statement</h2>");
+      function ifTest(x){
+        if (x) {
+          document.write(x+"<br/>");
+        } else {
+          document.write("NOT"+x+"<br/>");
+        }
+      }
+      ifTest(42);
+      ifTest("HelloWorld");
+      ifTest(null);
+      ifTest(0);
+      ifTest("");
+
+      function xor(b1, b2){
+        return (!b1&&b2)||(b1&&!b2);
+      }
+      document.write(xor(true,true)+","+xor(true,false)+","+xor(false,true)+","+xor(false,false));
+
+
+      /*multiline
+      --comment*/
+
+    //check for older browser-->
+    </script>
+
+  </body>
+</html>
