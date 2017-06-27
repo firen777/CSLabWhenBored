@@ -4,6 +4,12 @@
   <head>
     <title>CSS5</title>
     <link rel="stylesheet" type="text/css" href="css5style.css"/>
+    <style media="screen" type="text/css">
+      img{
+        max-width: 400px;
+        max-height: 400px;
+      }
+    </style>
   </head>
   <body>
     <h1>Goodbye World! (2)</h1>
@@ -11,5 +17,40 @@
     <a href="https://google.com">Google</a> <br/>
     <a href="css5-1.html">CSS5-1</a> <br/>
     <a href="css5-3.html">CSS5-3</a>
+    <br/>
+    <img src="../img/RubyFrame.png" alt="RubyFrame"/><br/>
+    <img src="../img/logo.png" alt="logo">
+    <form class="f1" action="css5-1.html" method="post-f1">
+      Input: <input type="text" name="Input" placeholder="gimme!" size="30" maxlength="8"> <br/>
+      PW: <input type="password" name="PW" maxlength="7">
+      <br/>
+      <input type="radio" name="gender" value="male">Male
+      <input type="radio" name="gender" value="female">Female
+      <input type="radio" name="gender" value="unicorn">Unicorn
+      <br/>
+      <input type="radio" name="food" value="east">eastern food
+      <input type="radio" name="food" value="west">western food
+      <input type="radio" name="food" value="trash">fast food
+      <br/>
+      <select class="PWList" name="password">
+        <option value="1">1</option>
+        <option value="100">100</option>
+        <option value="10">10</option>
+        <option value="0">0</option>
+        <option value="9">9</option>
+        <option value="5">5</option>
+        <option value="3">3</option>
+        <option value="7">7</option>
+        <option value="4">4</option>
+        <option value="2">2</option>
+        <option value="etc">etc..</option>
+      </select>
+      <br/>
+      <textarea name="textarea" rows="8" cols="80" placeholder="text area here"></textarea>
+      <br/>
+      <input type="file" name="upload">
+      <br/>
+      <input type="submit" name="submission" value="submission">
+    </form>
   </body>
 </html>
