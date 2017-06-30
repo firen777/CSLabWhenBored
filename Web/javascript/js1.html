@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>JS1</title>
+
   </head>
   <body>
 
@@ -145,11 +146,17 @@
         i++;
       } while (i>1000);
 
+      function gojs2(){
+        window.location.href="js2.html";
+      }
+
+
     //check for older browser-->
     </script>
 
     <form class="f1" action="index.html" method="post">
-      <input type="button" name="goJS2" value="Go js2.html!">
+      <input type="button" name="goJS2" value="Go js2.html!" onclick="alert('go');gojs2();">
     </form>
+
   </body>
 </html>

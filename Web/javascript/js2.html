@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <script type="text/javascript">
+    //class definition
+      function ClassExp1(name, key){
+        this.name = name;
+        this.key = key;
+        this.m1 = function(){
+          alert("called m1:" + this.key);
+        }
+      }
+      var obj1 = new ClassExp1("one", 1);
+      var obj2 = new ClassExp1("two", 2);
+    </script>
+    <meta charset="utf-8">
+    <title>JS2</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      document.write("<h2>Almost all things are objects...?</h2>");
+      var s0 = 1234;
+      var s1 = [ ]+[ ];
+      var s2 = [ ]+{ };
+      var s3 = { }+[ ];
+      var s4 = { }+{ };
+      document.write(s0 + " " + s1 + " " + s2 + " " + s3 + " " + s4 + "<br/>");
+      document.write(s0.length + " " + s1.length + " " + s2.length + " " + s3.length + " " + s4.length + "<hr/>");
+      document.write(obj1.name + " " + obj1.key + "<br/>");
+      document.write(obj2.name + " " + obj2.key + "<br/>");
+      var obj3 = {name:"three",key:3};
+      document.write(obj3.name + " " + obj3.key + "<hr/>");
+      console.log(obj3.name + " " + obj3.key + "<hr/>");
+      obj1.m1();
+    </script>
+
+  </body>
+</html>
