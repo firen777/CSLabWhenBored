@@ -30,33 +30,41 @@
       ###Magic Methods (Start with __XX)###
       ##Member function default public##
       #Constructor
-      function __construct(){
+      public function __construct(){
         $this->id = Animal::$population;    //Dollar sign fuckery: $ptr->member1 access $member1,
         Animal::$population++;              //Whilst $ptr->$x will first evaluate $x (Say, "member2"),
                                             //Then look up $ptr->member2.
-        echo "Animal" . $this->id . "has been born <br/>";
+        echo "Animal " . $this->id . " has been born <br/>";
       }
 
       #Destructor
-      function __destruct(){
-        echo "Animal" . $this->id . "has died <br/>";
-        Aniaml::$population--;
+      public function __destruct(){
+        echo "Animal $this->id has died <br/>";
+        Animal::$population--;
       }
 
       #Magic getter, allow for direct-access like behavior
-      function __get($name){
+      public function __get($name){
         return $this->$name;
       }
       #Magic setter, allow for direct-mutation like behavior
-      function __set($name, $value){
+      public function __set($name, $value){
         $this->$name = $value;
       }
 
-      #abstract function
+      #abstract function (cannot have body)
       abstract protected function moving();
       // {
-      //   echo "$this->name moved!";
+      //   echo $this->name .  " moved!";
       // }
+    }
+
+    /**
+    *
+    *
+    */
+    interface Cyborg {
+      public function getBinName();
     }
 
 
@@ -64,29 +72,40 @@
     /**Inheritence:
      * Dog Class
      */
-    class Dog extends Aniaml
+    class Dog extends Animal implements Cyborg
     {
-      function __construct($name, $food)
+      public function __construct($name, $food)
       {
         parent::__construct();
         $this->name = $name;
         $this->food = $food;
       }
 
-      function moving(){
-        return $this->name . "moved with four legs!!<br/>";
+      public function moving(){
+        return "$this->name moved with four legs!!<br/>";
+      }
+
+      public function getBinName(){
+        return "01000100 01001111 01000111";
       }
     }
 
-    function moveAnimal(Aniaml $a){
+    function moveAnimal(Animal $a){
       echo $a->moving();
     }
 
+    function showPurpose(Cyborg $c){
+      echo "Purpose: " . $c->getBinName() . "<br/>";
+    }
+
+    echo "Current Animal pop: " . Animal::$population . "<br/>";
+
     $dog1 = new Dog("PupPup", "Fluff");
+    echo "Current Animal pop: " . Animal::$population . "<br/>";
+
     moveAnimal($dog1);
-    echo $dog1->moving();
-
-
+    showPurpose($dog1);
+    echo "Current Animal pop: " . Animal::$population . "<br/>";
 
      ?>
 
