@@ -19,3 +19,7 @@
   <li><a href="https://www.youtube.com/watch?v=yPu6qV5byu4">MySQL</a></li>
   <li><a href="https://www.youtube.com/watch?v=mpQts3ezPVg">PHP/MySQL</a></li>
 </ul>
+<h2>Resource:</h2>
+<ul>
+<li>Wordpress</li>
+</ul>
