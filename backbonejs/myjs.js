@@ -7,16 +7,33 @@
 
 
 WebModel = Backbone.Model.extend({
-  var1: 0,
-  initialize:function(x){
-    var1=x;
+  defaults:
+  {
+    name: "Tom",
+    id: 42,
+    address: "mnb st."
+  },
+  initialize:function(){
+  },
+  method1: function(){
+    /**
+     * on ("change:<field name>", function(){...})
+     */
+    this.on("change:id");
   }
 });
 
-$(document).ready(function(){
-  var m = new WebModel(42);
+$(document).ready(function(){ //wait for the document finish loading
+
+
+  var m = new WebModel({
+    name: "asdf", id: 1234
+  });
+  m.set({id:90});
+
+  /*JQuery training*/
   $("#jq1").click(function(){
-    alert($(this).text()+$(".jqcl1").text()+m.get("var1"));
+    alert($(this).text()+$(".jqcl1").text()+m.get("name")+m.get("id")+m.get("address"));
   });
   m.set("var1",12);
 });
